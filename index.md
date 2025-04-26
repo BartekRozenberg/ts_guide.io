@@ -1060,6 +1060,7 @@ TypeScript wprowadza modyfikatory dostępu, które kontrolują widoczność wła
 - public (domyślny) – Właściwości i metody są dostępne wszędzie.
 - private – Właściwości i metody są dostępne tylko wewnątrz klasy.
 - protected – Właściwości i metody są dostępne wewnątrz klasy i w klasach dziedziczących.
+
 Przykład:
 
 ```typescript
@@ -1085,7 +1086,6 @@ const konto = new KontoBankowe("123456789", 1000);
 console.log(konto.numerKonta); // "123456789"
 console.log(konto.sprawdzSaldo()); // 1000
 konto.zmienSaldo(500); // Błąd: metoda `zmienSaldo` jest prywatna
-
 ```
 
 #### Dziedziczenie
