@@ -962,8 +962,8 @@ let uzytkownik: Uzytkownik = {
 #### Interfejsy a typy
 Interfejsy są podobne do typów (type), ale mają kilka różnic:
 
--Interfejsy mogą być rozszerzane za pomocą extends, podczas gdy typy można łączyć za pomocą operatora &.
--Interfejsy są bardziej zorientowane na obiekty, podczas gdy typy są bardziej uniwersalne (mogą reprezentować np. unie typów).
+- Interfejsy mogą być rozszerzane za pomocą extends, podczas gdy typy można łączyć za pomocą operatora &.
+- Interfejsy są bardziej zorientowane na obiekty, podczas gdy typy są bardziej uniwersalne (mogą reprezentować np. unie typów).
 Przykład z typem:
 ```typescript
 type Osoba = {
@@ -1013,8 +1013,8 @@ let student = {
 let osoba: Osoba = student; // Dozwolone
 ```
 
-####
-Niejasne typowanie dynamicznych kluczy Jeśli używasz indeksowania w interfejsach, upewnij się, że typ klucza i wartości są odpowiednio zdefiniowane. Błędy mogą pojawić się, gdy klucz lub wartość nie pasują do zadeklarowanego typu:
+#### Niejasne typowanie dynamicznych kluczy
+Jeśli używasz indeksowania w interfejsach, upewnij się, że typ klucza i wartości są odpowiednio zdefiniowane. Błędy mogą pojawić się, gdy klucz lub wartość nie pasują do zadeklarowanego typu:
 ```typescript
 interface Slownik {
     [klucz: string]: string;
@@ -1061,6 +1061,7 @@ TypeScript wprowadza modyfikatory dostępu, które kontrolują widoczność wła
 - private – Właściwości i metody są dostępne tylko wewnątrz klasy.
 - protected – Właściwości i metody są dostępne wewnątrz klasy i w klasach dziedziczących.
 Przykład:
+
 ```typescript
 class KontoBankowe {
     public numerKonta: string;
@@ -1083,7 +1084,7 @@ class KontoBankowe {
 const konto = new KontoBankowe("123456789", 1000);
 console.log(konto.numerKonta); // "123456789"
 console.log(konto.sprawdzSaldo()); // 1000
-// konto.zmienSaldo(500); // Błąd: metoda `zmienSaldo` jest prywatna
+konto.zmienSaldo(500); // Błąd: metoda `zmienSaldo` jest prywatna
 
 ```
 
