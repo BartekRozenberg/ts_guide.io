@@ -1084,6 +1084,7 @@ const konto = new KontoBankowe("123456789", 1000);
 console.log(konto.numerKonta); // "123456789"
 console.log(konto.sprawdzSaldo()); // 1000
 // konto.zmienSaldo(500); // Błąd: metoda `zmienSaldo` jest prywatna
+
 ```
 
 #### Dziedziczenie
@@ -1733,5 +1734,5 @@ npm run docs
 Link do oficjalnej dokumentacji TypeScript:
 [Oficjalna dokumentacja TypeScript](https://www.typescriptlang.org/docs/)
 
-####
+
 Autor poradnika: Bartłomiej Rozenberg
